@@ -7,7 +7,7 @@ import { createHash as sha256 } from 'node:crypto';
 import test from 'node:test';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
-const pages = ['index.html', 'download.html', 'privacy.html', 'changelog.html'];
+const pages = ['index.html', 'download.html', 'get-mac.html', 'privacy.html', 'changelog.html'];
 
 // Byte-identical to voxloom-site #8 (e58eb13 / PR #10 tree c7dc05d).
 const FAVICON_SVG_SHA256 =

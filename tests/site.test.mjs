@@ -8,7 +8,7 @@ import { expectedDisabledBytes } from '../scripts/site-build.mjs';
 
 const root = fileURLToPath(new URL('../', import.meta.url));
 const origin = 'https://voxloom.app';
-const pages = ['index.html', 'download.html', 'privacy.html', 'changelog.html'];
+const pages = ['index.html', 'download.html', 'get-mac.html', 'privacy.html', 'changelog.html'];
 
 for (const page of pages) {
   test(`${page}: metadata, local links and launch copy are valid`, () => {
@@ -41,12 +41,12 @@ const read = (page) => readFileSync(resolve(root, page), 'utf8');
 
 test('download page is ready for v0.4.0 assets and install steps', () => {
   const html = read('download.html');
-  for (const url of [dmg, sums, `${repo}/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.app.zip`, `${repo}/releases/tag/v0.4.0`, `${repo}/releases`, `${repo}/issues`]) {
+  for (const url of [sums, `${repo}/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.app.zip`, `${repo}/releases/tag/v0.4.0`, `${repo}/releases`, `${repo}/issues`]) {
     assert.ok(html.includes(`href="${url}"`), `missing ${url}`);
   }
   assert.match(html, /class="badge beta">Beta</);
   assert.match(html, /Work in progress/);
-  assert.match(html, /Download v0\.4\.0 \(\.dmg\)/);
+  assert.ok(html.includes('<a class="btn" href="get-mac.html">Download v0.4.0 (.dmg)</a>'));
   assert.match(html, /<code>Voxloom_0\.4\.0_macos_universal\.dmg<\/code>/);
   assert.match(html, /macOS 13\.1 \(Ventura\) or later/);
   assert.match(html, /drag <b>Voxloom<\/b> to Applications/);
@@ -58,7 +58,7 @@ test('download page is ready for v0.4.0 assets and install steps', () => {
 
 test('homepage download buttons and beta label use v0.4.0', () => {
   const html = read('index.html');
-  assert.equal(html.split(`href="${dmg}"`).length - 1, 2);
+  assert.equal(html.split('href="get-mac.html"').length - 1, 2);
   assert.equal(html.split('Download v0.4.0 for macOS').length - 1, 2);
   assert.match(html, /Beta v0\.4\.0/);
   assert.match(html, /class="badge beta">Beta</);

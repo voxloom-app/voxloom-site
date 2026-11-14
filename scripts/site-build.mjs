@@ -2,7 +2,7 @@ import { readFileSync } from 'node:fs';
 import { copyFile, mkdir, readFile, rm, writeFile, access } from 'node:fs/promises';
 import { dirname, resolve } from 'node:path';
 
-export const pages = ['index.html', 'download.html', 'privacy.html', 'changelog.html'];
+export const pages = ['index.html', 'download.html', 'get-mac.html', 'privacy.html', 'changelog.html'];
 export const files = [
   ...pages, 'base.css', 'home.css', 'favicon.ico', 'favicon.svg',
   'icon-192.png', 'icon-512.png', 'apple-touch-icon.png',
