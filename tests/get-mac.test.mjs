@@ -46,6 +46,7 @@ test('get-mac.html is noindex, ships one inline script and no tracking of its ow
   const js = scripts[0][1];
   assert.match(js, /addEventListener\('load'/);
   assert.match(js, /getElementById\('dmg-link'\)\.href/);
+  assert.match(js, /setTimeout\(start, 3000\)/, 'download must not wait on a hung analytics script');
   assert.doesNotMatch(js, /cookie|localStorage|sessionStorage|fetch|sendBeacon|XMLHttpRequest|_vercel|window\.va/);
   assert.doesNotMatch(page, /<iframe|<img\b/);
 });

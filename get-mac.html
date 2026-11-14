@@ -70,10 +70,16 @@
   <span class="ph">voxloom.app</span>
 </footer>
 <script>
-  // Start the DMG download after load so the page view is recorded first.
-  window.addEventListener('load', function () {
-    setTimeout(function () { window.location.href = document.getElementById('dmg-link').href; }, 1000);
-  });
+  // Start the DMG download 1s after load so the page view is recorded first,
+  // but never wait more than 3s in case the analytics script hangs.
+  var started = false;
+  function start() {
+    if (started) return;
+    started = true;
+    window.location.href = document.getElementById('dmg-link').href;
+  }
+  window.addEventListener('load', function () { setTimeout(start, 1000); });
+  setTimeout(start, 3000);
 </script>
 </body>
 </html>
