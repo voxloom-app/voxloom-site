@@ -1,0 +1,146 @@
+{
+ "scenario": "click-home-nojs",
+ "chromePid": 397150,
+ "events": [
+  {
+   "t": 24,
+   "iso": "2026-11-14T17:16:51.998Z",
+   "k": "request",
+   "method": "GET",
+   "url": "http://127.0.0.1:8121/index.html",
+   "type": "Document",
+   "wallTime": 1794676611.998153
+  },
+  {
+   "t": 29,
+   "iso": "2026-11-14T17:16:52.003Z",
+   "k": "framenavigated",
+   "url": "http://127.0.0.1:8121/index.html"
+  },
+  {
+   "t": 125,
+   "iso": "2026-11-14T17:16:52.099Z",
+   "k": "button",
+   "text": "Download v0.4.0 for macOS",
+   "href": "get-mac.html"
+  },
+  {
+   "t": 127,
+   "iso": "2026-11-14T17:16:52.101Z",
+   "k": "click"
+  },
+  {
+   "t": 143,
+   "iso": "2026-11-14T17:16:52.117Z",
+   "k": "request",
+   "method": "GET",
+   "url": "http://127.0.0.1:8121/get-mac.html",
+   "type": "Document",
+   "wallTime": 1794676612.117033
+  },
+  {
+   "t": 146,
+   "iso": "2026-11-14T17:16:52.120Z",
+   "k": "framenavigated",
+   "url": "http://127.0.0.1:8121/get-mac.html"
+  },
+  {
+   "t": 155,
+   "iso": "2026-11-14T17:16:52.129Z",
+   "k": "landed",
+   "url": "http://127.0.0.1:8121/get-mac.html"
+  },
+  {
+   "t": 234,
+   "iso": "2026-11-14T17:16:52.208Z",
+   "k": "screenshot",
+   "name": "click-home-nojs-landed"
+  },
+  {
+   "t": 1158,
+   "iso": "2026-11-14T17:16:53.132Z",
+   "k": "request",
+   "method": "GET",
+   "url": "https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg",
+   "type": "Document",
+   "wallTime": 1794676613.132256
+  },
+  {
+   "t": 1262,
+   "iso": "2026-11-14T17:16:53.236Z",
+   "k": "request",
+   "method": "GET",
+   "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1367504845/c25bad92-7ce0-45c8-8f9a-da3ae851808c?sp=r&sv=2018-11-09&sr=b&spr=https&s",
+   "type": "Document",
+   "wallTime": 1794676613.235778
+  },
+  {
+   "t": 1309,
+   "iso": "2026-11-14T17:16:53.283Z",
+   "k": "requestfailed",
+   "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1367504845/c25bad92-7ce0-45c8-8f9a-da3ae851808c?sp=r&sv=2018-11",
+   "err": "net::ERR_ABORTED"
+  },
+  {
+   "t": 1312,
+   "iso": "2026-11-14T17:16:53.286Z",
+   "k": "downloadWillBegin",
+   "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1367504845/c25bad92-7ce0-45c8-8f9a-da3ae851808c?sp=r&sv=2018-11",
+   "name": "Voxloom_0.4.0_macos_universal.dmg",
+   "frameId": "D11F3310F298234EDB3AAD30FCD77E33"
+  },
+  {
+   "t": 1439,
+   "iso": "2026-11-14T17:16:53.413Z",
+   "k": "downloadProgress",
+   "state": "completed",
+   "received": 20123976,
+   "total": 20123976
+  },
+  {
+   "t": 1565,
+   "iso": "2026-11-14T17:16:53.539Z",
+   "k": "screenshot",
+   "name": "click-home-nojs-after-download"
+  }
+ ],
+ "landed": {
+  "href": "http://127.0.0.1:8121/get-mac.html",
+  "title": "Downloading Voxloom — Voxloom",
+  "lang": "en",
+  "h1": [
+   "Your download is starting…"
+  ],
+  "robots": "noindex",
+  "webdriver": false,
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, l",
+  "visibility": "visible",
+  "dmgLink": "https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg",
+  "dmgLinkText": "click here to download v0.4.0 (.dmg)",
+  "dmgLinkVisible": true,
+  "vaLoaded": false
+ },
+ "files": [
+  {
+   "file": "Voxloom_0.4.0_macos_universal.dmg",
+   "size": 20123976,
+   "sha256": "e4a3b950d14008b0ed8050ba96a3a1e0c04e7987cb6fd121a9bf9fa931bb74d3"
+  }
+ ],
+ "after": {
+  "href": "http://127.0.0.1:8121/get-mac.html",
+  "title": "Downloading Voxloom — Voxloom",
+  "lang": "en",
+  "h1": [
+   "Your download is starting…"
+  ],
+  "robots": "noindex",
+  "webdriver": false,
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, l",
+  "visibility": "visible",
+  "dmgLink": "https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg",
+  "dmgLinkText": "click here to download v0.4.0 (.dmg)",
+  "dmgLinkVisible": true,
+  "vaLoaded": false
+ }
+}

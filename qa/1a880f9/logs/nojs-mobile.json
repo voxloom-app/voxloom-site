@@ -1,0 +1,49 @@
+{
+ "scenario": "nojs-mobile",
+ "chromePid": 399058,
+ "events": [
+  {
+   "t": 26,
+   "iso": "2026-11-14T17:17:40.601Z",
+   "k": "framenavigated",
+   "url": "about:blank"
+  },
+  {
+   "t": 31,
+   "iso": "2026-11-14T17:17:40.606Z",
+   "k": "request",
+   "method": "GET",
+   "url": "http://127.0.0.1:8125/get-mac.html",
+   "type": "Document",
+   "wallTime": 1794676660.605789
+  },
+  {
+   "t": 36,
+   "iso": "2026-11-14T17:17:40.611Z",
+   "k": "framenavigated",
+   "url": "http://127.0.0.1:8125/get-mac.html"
+  },
+  {
+   "t": 174,
+   "iso": "2026-11-14T17:17:40.749Z",
+   "k": "screenshot",
+   "name": "nojs-get-mac-390-dpr2"
+  }
+ ],
+ "info": {
+  "href": "http://127.0.0.1:8125/get-mac.html",
+  "title": "Downloading Voxloom — Voxloom",
+  "lang": "en",
+  "h1": [
+   "Your download is starting…"
+  ],
+  "robots": "noindex",
+  "webdriver": false,
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, l",
+  "visibility": "visible",
+  "dmgLink": "https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg",
+  "dmgLinkText": "click here to download v0.4.0 (.dmg)",
+  "dmgLinkVisible": true,
+  "vaLoaded": false
+ }
+}

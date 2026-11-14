@@ -1,0 +1,346 @@
+{
+ "scenario": "renders-nojs",
+ "chromePid": 416283,
+ "events": [
+  {
+   "t": 20,
+   "iso": "2026-11-14T17:29:55.592Z",
+   "k": "request",
+   "method": "GET",
+   "url": "http://127.0.0.1:8125/get-mac.html",
+   "type": "Document",
+   "wallTime": 1794677395.592259
+  },
+  {
+   "t": 25,
+   "iso": "2026-11-14T17:29:55.597Z",
+   "k": "framenavigated",
+   "url": "http://127.0.0.1:8125/get-mac.html"
+  },
+  {
+   "t": 1087,
+   "iso": "2026-11-14T17:29:56.659Z",
+   "k": "request",
+   "method": "GET",
+   "url": "https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg",
+   "type": "Document",
+   "wallTime": 1794677396.658844
+  },
+  {
+   "t": 1222,
+   "iso": "2026-11-14T17:29:56.794Z",
+   "k": "request",
+   "method": "GET",
+   "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1367504845/c25bad92-7ce0-45c8-8f9a-da3ae851808c?sp=r&sv=2018-11-09&sr=b&spr=https&s",
+   "type": "Document",
+   "wallTime": 1794677396.793372
+  },
+  {
+   "t": 1260,
+   "iso": "2026-11-14T17:29:56.832Z",
+   "k": "requestfailed",
+   "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1367504845/c25bad92-7ce0-45c8-8f9a-da3ae851808c?sp=r&sv=2018-11",
+   "err": "net::ERR_ABORTED"
+  },
+  {
+   "t": 1262,
+   "iso": "2026-11-14T17:29:56.834Z",
+   "k": "downloadWillBegin",
+   "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1367504845/c25bad92-7ce0-45c8-8f9a-da3ae851808c?sp=r&sv=2018-11",
+   "name": "Voxloom_0.4.0_macos_universal.dmg",
+   "frameId": "F47BC714A5586E6B5CE398089DAF5CB9"
+  },
+  {
+   "t": 1263,
+   "iso": "2026-11-14T17:29:56.835Z",
+   "k": "downloadProgress",
+   "state": "canceled",
+   "received": 0,
+   "total": 20123976
+  },
+  {
+   "t": 2135,
+   "iso": "2026-11-14T17:29:57.707Z",
+   "k": "screenshot",
+   "name": "pr-get-mac-nojs-1280-dpr1"
+  },
+  {
+   "t": 2182,
+   "iso": "2026-11-14T17:29:57.754Z",
+   "k": "request",
+   "method": "GET",
+   "url": "http://127.0.0.1:8125/get-mac.html",
+   "type": "Document",
+   "wallTime": 1794677397.754042
+  },
+  {
+   "t": 2186,
+   "iso": "2026-11-14T17:29:57.758Z",
+   "k": "framenavigated",
+   "url": "http://127.0.0.1:8125/get-mac.html"
+  },
+  {
+   "t": 3223,
+   "iso": "2026-11-14T17:29:58.795Z",
+   "k": "request",
+   "method": "GET",
+   "url": "https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg",
+   "type": "Document",
+   "wallTime": 1794677398.795288
+  },
+  {
+   "t": 3234,
+   "iso": "2026-11-14T17:29:58.806Z",
+   "k": "request",
+   "method": "GET",
+   "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1367504845/c25bad92-7ce0-45c8-8f9a-da3ae851808c?sp=r&sv=2018-11-09&sr=b&spr=https&s",
+   "type": "Document",
+   "wallTime": 1794677398.806495
+  },
+  {
+   "t": 3239,
+   "iso": "2026-11-14T17:29:58.811Z",
+   "k": "requestfailed",
+   "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1367504845/c25bad92-7ce0-45c8-8f9a-da3ae851808c?sp=r&sv=2018-11",
+   "err": "net::ERR_ABORTED"
+  },
+  {
+   "t": 3244,
+   "iso": "2026-11-14T17:29:58.816Z",
+   "k": "downloadWillBegin",
+   "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1367504845/c25bad92-7ce0-45c8-8f9a-da3ae851808c?sp=r&sv=2018-11",
+   "name": "Voxloom_0.4.0_macos_universal.dmg",
+   "frameId": "91CB7A8EA4F32AFFAEC9F60A7B1FB384"
+  },
+  {
+   "t": 3244,
+   "iso": "2026-11-14T17:29:58.816Z",
+   "k": "downloadProgress",
+   "state": "canceled",
+   "received": 0,
+   "total": 20123976
+  },
+  {
+   "t": 4363,
+   "iso": "2026-11-14T17:29:59.935Z",
+   "k": "screenshot",
+   "name": "pr-get-mac-nojs-1280-dpr2"
+  },
+  {
+   "t": 4399,
+   "iso": "2026-11-14T17:29:59.971Z",
+   "k": "framenavigated",
+   "url": "about:blank"
+  },
+  {
+   "t": 4405,
+   "iso": "2026-11-14T17:29:59.977Z",
+   "k": "request",
+   "method": "GET",
+   "url": "http://127.0.0.1:8125/get-mac.html",
+   "type": "Document",
+   "wallTime": 1794677399.977009
+  },
+  {
+   "t": 4410,
+   "iso": "2026-11-14T17:29:59.982Z",
+   "k": "framenavigated",
+   "url": "http://127.0.0.1:8125/get-mac.html"
+  },
+  {
+   "t": 5429,
+   "iso": "2026-11-14T17:30:01.001Z",
+   "k": "request",
+   "method": "GET",
+   "url": "https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg",
+   "type": "Document",
+   "wallTime": 1794677401.000748
+  },
+  {
+   "t": 5449,
+   "iso": "2026-11-14T17:30:01.021Z",
+   "k": "request",
+   "method": "GET",
+   "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1367504845/c25bad92-7ce0-45c8-8f9a-da3ae851808c?sp=r&sv=2018-11-09&sr=b&spr=https&s",
+   "type": "Document",
+   "wallTime": 1794677401.021368
+  },
+  {
+   "t": 5456,
+   "iso": "2026-11-14T17:30:01.028Z",
+   "k": "requestfailed",
+   "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1367504845/c25bad92-7ce0-45c8-8f9a-da3ae851808c?sp=r&sv=2018-11",
+   "err": "net::ERR_ABORTED"
+  },
+  {
+   "t": 5458,
+   "iso": "2026-11-14T17:30:01.030Z",
+   "k": "downloadWillBegin",
+   "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1367504845/c25bad92-7ce0-45c8-8f9a-da3ae851808c?sp=r&sv=2018-11",
+   "name": "Voxloom_0.4.0_macos_universal.dmg",
+   "frameId": "8E3D157BE4EE17B4AFAE2EC55CE6ED2D"
+  },
+  {
+   "t": 5459,
+   "iso": "2026-11-14T17:30:01.031Z",
+   "k": "downloadProgress",
+   "state": "canceled",
+   "received": 0,
+   "total": 20123976
+  },
+  {
+   "t": 6480,
+   "iso": "2026-11-14T17:30:02.052Z",
+   "k": "screenshot",
+   "name": "pr-get-mac-nojs-390-dpr1"
+  },
+  {
+   "t": 6518,
+   "iso": "2026-11-14T17:30:02.090Z",
+   "k": "framenavigated",
+   "url": "about:blank"
+  },
+  {
+   "t": 6526,
+   "iso": "2026-11-14T17:30:02.098Z",
+   "k": "request",
+   "method": "GET",
+   "url": "http://127.0.0.1:8125/get-mac.html",
+   "type": "Document",
+   "wallTime": 1794677402.097951
+  },
+  {
+   "t": 6530,
+   "iso": "2026-11-14T17:30:02.102Z",
+   "k": "framenavigated",
+   "url": "http://127.0.0.1:8125/get-mac.html"
+  },
+  {
+   "t": 7546,
+   "iso": "2026-11-14T17:30:03.118Z",
+   "k": "request",
+   "method": "GET",
+   "url": "https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg",
+   "type": "Document",
+   "wallTime": 1794677403.11863
+  },
+  {
+   "t": 7557,
+   "iso": "2026-11-14T17:30:03.129Z",
+   "k": "request",
+   "method": "GET",
+   "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1367504845/c25bad92-7ce0-45c8-8f9a-da3ae851808c?sp=r&sv=2018-11-09&sr=b&spr=https&s",
+   "type": "Document",
+   "wallTime": 1794677403.129278
+  },
+  {
+   "t": 7562,
+   "iso": "2026-11-14T17:30:03.134Z",
+   "k": "requestfailed",
+   "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1367504845/c25bad92-7ce0-45c8-8f9a-da3ae851808c?sp=r&sv=2018-11",
+   "err": "net::ERR_ABORTED"
+  },
+  {
+   "t": 7565,
+   "iso": "2026-11-14T17:30:03.137Z",
+   "k": "downloadWillBegin",
+   "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1367504845/c25bad92-7ce0-45c8-8f9a-da3ae851808c?sp=r&sv=2018-11",
+   "name": "Voxloom_0.4.0_macos_universal.dmg",
+   "frameId": "B1ADFF33F3B4579022DEADF18646598F"
+  },
+  {
+   "t": 7565,
+   "iso": "2026-11-14T17:30:03.137Z",
+   "k": "downloadProgress",
+   "state": "canceled",
+   "received": 0,
+   "total": 20123976
+  },
+  {
+   "t": 8645,
+   "iso": "2026-11-14T17:30:04.217Z",
+   "k": "screenshot",
+   "name": "pr-get-mac-nojs-390-dpr2"
+  }
+ ],
+ "nojs-1280-1": {
+  "href": "http://127.0.0.1:8125/get-mac.html",
+  "title": "Downloading Voxloom — Voxloom",
+  "lang": "en",
+  "h1": [
+   "Your download is starting…"
+  ],
+  "robots": "noindex",
+  "webdriver": false,
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, l",
+  "visibility": "visible",
+  "dmgLink": "https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg",
+  "dmgLinkText": "Download v0.4.0 (.dmg)",
+  "dmgLinkVisible": true,
+  "vaLoaded": false
+ },
+ "overflow-1280-1": {
+  "scrollW": 1280,
+  "clientW": 1280
+ },
+ "nojs-1280-2": {
+  "href": "http://127.0.0.1:8125/get-mac.html",
+  "title": "Downloading Voxloom — Voxloom",
+  "lang": "en",
+  "h1": [
+   "Your download is starting…"
+  ],
+  "robots": "noindex",
+  "webdriver": false,
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, l",
+  "visibility": "visible",
+  "dmgLink": "https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg",
+  "dmgLinkText": "Download v0.4.0 (.dmg)",
+  "dmgLinkVisible": true,
+  "vaLoaded": false
+ },
+ "overflow-1280-2": {
+  "scrollW": 1280,
+  "clientW": 1280
+ },
+ "nojs-390-1": {
+  "href": "http://127.0.0.1:8125/get-mac.html",
+  "title": "Downloading Voxloom — Voxloom",
+  "lang": "en",
+  "h1": [
+   "Your download is starting…"
+  ],
+  "robots": "noindex",
+  "webdriver": false,
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, l",
+  "visibility": "visible",
+  "dmgLink": "https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg",
+  "dmgLinkText": "Download v0.4.0 (.dmg)",
+  "dmgLinkVisible": true,
+  "vaLoaded": false
+ },
+ "overflow-390-1": {
+  "scrollW": 390,
+  "clientW": 390
+ },
+ "nojs-390-2": {
+  "href": "http://127.0.0.1:8125/get-mac.html",
+  "title": "Downloading Voxloom — Voxloom",
+  "lang": "en",
+  "h1": [
+   "Your download is starting…"
+  ],
+  "robots": "noindex",
+  "webdriver": false,
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, l",
+  "visibility": "visible",
+  "dmgLink": "https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg",
+  "dmgLinkText": "Download v0.4.0 (.dmg)",
+  "dmgLinkVisible": true,
+  "vaLoaded": false
+ },
+ "overflow-390-2": {
+  "scrollW": 390,
+  "clientW": 390
+ }
+}

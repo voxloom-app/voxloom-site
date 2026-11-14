@@ -1,0 +1,37 @@
+diff --git a/get-mac.html b/get-mac.html
+index 8212725..6429559 100644
+--- a/get-mac.html
++++ b/get-mac.html
+@@ -70,10 +70,16 @@
+   <span class="ph">voxloom.app</span>
+ </footer>
+ <script>
+-  // Start the DMG download after load so the page view is recorded first.
+-  window.addEventListener('load', function () {
+-    setTimeout(function () { window.location.href = document.getElementById('dmg-link').href; }, 1000);
+-  });
++  // Start the DMG download 1s after load so the page view is recorded first,
++  // but never wait more than 3s in case the analytics script hangs.
++  var started = false;
++  function start() {
++    if (started) return;
++    started = true;
++    window.location.href = document.getElementById('dmg-link').href;
++  }
++  window.addEventListener('load', function () { setTimeout(start, 1000); });
++  setTimeout(start, 3000);
+ </script>
+ </body>
+ </html>
+diff --git a/tests/get-mac.test.mjs b/tests/get-mac.test.mjs
+index 4599a40..72562c6 100644
+--- a/tests/get-mac.test.mjs
++++ b/tests/get-mac.test.mjs
+@@ -46,6 +46,7 @@ test('get-mac.html is noindex, ships one inline script and no tracking of its ow
+   const js = scripts[0][1];
+   assert.match(js, /addEventListener\('load'/);
+   assert.match(js, /getElementById\('dmg-link'\)\.href/);
++  assert.match(js, /setTimeout\(start, 3000\)/, 'download must not wait on a hung analytics script');
+   assert.doesNotMatch(js, /cookie|localStorage|sessionStorage|fetch|sendBeacon|XMLHttpRequest|_vercel|window\.va/);
+   assert.doesNotMatch(page, /<iframe|<img\b/);
+ });

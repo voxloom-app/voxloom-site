@@ -1,0 +1,54 @@
+
+> voxloom-site@1.0.0 check
+> npm test && bash scripts/check-placeholders.sh
+
+
+> voxloom-site@1.0.0 test
+> node --test tests/*.test.mjs
+
+✔ source privacy.html keeps the card behind a build marker and does not ship the claim (1.962027ms)
+✔ disabled build matches source, with only the analytics marker stripped from privacy.html (34.135523ms)
+✔ enabled build injects one script plus stub per page and the privacy card (36.04923ms)
+✔ invalid VOXLOOM_ANALYTICS values fail before writing output (9.848876ms)
+✔ build with the flag throws if the last-updated date is missing and leaves output untouched (10.656668ms)
+Built 14 static files in public/.
+✔ marker replacement is checked, consumes leading indentation, and works without a trailing newline (8.973698ms)
+✔ a missing analytics marker fails before writing output (4.383389ms)
+✔ a missing </body> tag fails before writing output (2.622671ms)
+✔ no file in the repo mentions the previous analytics vendor (0.836762ms)
+✔ favicon.svg is byte-identical to the #8 asset (0.98774ms)
+✔ favicon.ico is byte-identical to the #8 asset (0.171744ms)
+✔ icon-192.png and icon-512.png are opaque full-bleed tiles (12.411859ms)
+✔ manifest.webmanifest is valid and its icon files exist (6.882954ms)
+✔ every page links the manifest and keeps the #8 icon markup plus the 192 PNG (0.338549ms)
+✔ DMG buttons on the homepage and download page go through get-mac.html (0.740839ms)
+✔ secondary release links stay direct to GitHub (1.060015ms)
+✔ get-mac.html targets the v0.4.0 DMG in its fallback link and no-JS refresh (0.287723ms)
+✔ get-mac.html is noindex, ships one inline script and no tracking of its own (0.255086ms)
+✔ no sitemap or robots file lists get-mac.html (0.237382ms)
+✔ index.html: metadata, local links and launch copy are valid (1.63401ms)
+✔ download.html: metadata, local links and launch copy are valid (0.346465ms)
+✔ get-mac.html: metadata, local links and launch copy are valid (0.291479ms)
+✔ privacy.html: metadata, local links and launch copy are valid (1.032398ms)
+✔ changelog.html: metadata, local links and launch copy are valid (0.371727ms)
+✔ download page is ready for v0.4.0 assets and install steps (0.248891ms)
+✔ homepage download buttons and beta label use v0.4.0 (0.167676ms)
+✔ homepage presents the launch features without an upcoming-release teaser (0.594405ms)
+✔ changelog carries the v0.2.0 release notes (0.261238ms)
+✔ install guide describes the v0.3 in-app cleanup download, not manual Import (0.299164ms)
+✔ v0.4 release notes cover merged changes and sit above v0.3 (0.293446ms)
+✔ v0.3 launch notes cover merged changes and preserve historical v0.2 downloads (0.385384ms)
+✔ privacy covers both local models, plain-text history and temporary clipboard use (0.19788ms)
+✔ no stale pre-release copy remains (0.323775ms)
+✔ build publishes only the website, never local tokens, docs or scripts (42.720773ms)
+✔ favicon retains the app brand colors after migration (0.154517ms)
+✔ no file still points at the old Vercel subdomain or previous GitHub owner (0.924498ms)
+ℹ tests 36
+ℹ suites 0
+ℹ pass 36
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 153.761745
+OK: no PLACEHOLDER markers found.

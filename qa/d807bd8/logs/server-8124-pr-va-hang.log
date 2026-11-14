@@ -1,0 +1,5 @@
+2026-11-14T17:22:02.548Z listening 8124 /tmp/qa-site12-out/pr-va hang
+2026-11-14T17:22:11.049Z GET /get-mac.html 200
+2026-11-14T17:22:11.058Z SCRIPT hang
+2026-11-14T17:22:11.058Z GET /base.css 200
+2026-11-14T17:22:11.060Z GET /manifest.webmanifest 200

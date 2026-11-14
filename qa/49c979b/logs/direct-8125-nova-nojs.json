@@ -1,0 +1,103 @@
+{
+ "scenario": "direct-8125-nova-nojs",
+ "chromePid": 418148,
+ "events": [
+  {
+   "t": 19,
+   "iso": "2026-11-14T17:30:37.923Z",
+   "k": "goto"
+  },
+  {
+   "t": 23,
+   "iso": "2026-11-14T17:30:37.927Z",
+   "k": "request",
+   "method": "GET",
+   "url": "http://127.0.0.1:8125/get-mac.html",
+   "type": "Document",
+   "wallTime": 1794677437.926338
+  },
+  {
+   "t": 26,
+   "iso": "2026-11-14T17:30:37.930Z",
+   "k": "framenavigated",
+   "url": "http://127.0.0.1:8125/get-mac.html"
+  },
+  {
+   "t": 160,
+   "iso": "2026-11-14T17:30:38.064Z",
+   "k": "screenshot",
+   "name": "direct-8125-nova-nojs-1280"
+  },
+  {
+   "t": 1075,
+   "iso": "2026-11-14T17:30:38.979Z",
+   "k": "request",
+   "method": "GET",
+   "url": "https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg",
+   "type": "Document",
+   "wallTime": 1794677438.978867
+  },
+  {
+   "t": 1236,
+   "iso": "2026-11-14T17:30:39.140Z",
+   "k": "request",
+   "method": "GET",
+   "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1367504845/c25bad92-7ce0-45c8-8f9a-da3ae851808c?sp=r&sv=2018-11-09&sr=b&spr=https&s",
+   "type": "Document",
+   "wallTime": 1794677439.140241
+  },
+  {
+   "t": 1284,
+   "iso": "2026-11-14T17:30:39.188Z",
+   "k": "requestfailed",
+   "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1367504845/c25bad92-7ce0-45c8-8f9a-da3ae851808c?sp=r&sv=2018-11",
+   "err": "net::ERR_ABORTED"
+  },
+  {
+   "t": 1287,
+   "iso": "2026-11-14T17:30:39.191Z",
+   "k": "downloadWillBegin",
+   "url": "https://release-assets.githubusercontent.com/github-production-release-asset/1367504845/c25bad92-7ce0-45c8-8f9a-da3ae851808c?sp=r&sv=2018-11",
+   "name": "Voxloom_0.4.0_macos_universal.dmg",
+   "frameId": "AA946B0344BE920A3A5BE6604BB8A84E"
+  },
+  {
+   "t": 1414,
+   "iso": "2026-11-14T17:30:39.318Z",
+   "k": "downloadProgress",
+   "state": "completed",
+   "received": 20123976,
+   "total": 20123976
+  },
+  {
+   "t": 5763,
+   "iso": "2026-11-14T17:30:43.667Z",
+   "k": "screenshot",
+   "name": "direct-8125-nova-nojs-after"
+  }
+ ],
+ "files": [
+  {
+   "file": "Voxloom_0.4.0_macos_universal.dmg",
+   "size": 20123976,
+   "sha256": "e4a3b950d14008b0ed8050ba96a3a1e0c04e7987cb6fd121a9bf9fa931bb74d3"
+  }
+ ],
+ "after": {
+  "href": "http://127.0.0.1:8125/get-mac.html",
+  "title": "Downloading Voxloom — Voxloom",
+  "lang": "en",
+  "h1": [
+   "Your download is starting…"
+  ],
+  "robots": "noindex",
+  "webdriver": false,
+  "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, l",
+  "visibility": "visible",
+  "dmgLink": "https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg",
+  "dmgLinkText": "Download v0.4.0 (.dmg)",
+  "dmgLinkVisible": true,
+  "vaLoaded": false
+ },
+ "html_has_va": false
+}

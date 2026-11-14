@@ -1,0 +1,46 @@
+== index.html: main 43 refs, PR 43 refs
+   -https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg
+   +get-mac.html
+   -https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg
+   +get-mac.html
+== download.html: main 41 refs, PR 41 refs
+   -https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg
+   +get-mac.html
+== privacy.html: main 35 refs, PR 35 refs
+== changelog.html: main 68 refs, PR 68 refs
+== robots meta per page (PR build)
+   changelog.html []
+   download.html []
+   get-mac.html ['<meta name="robots" content="noindex">']
+   index.html []
+   privacy.html []
+== get-mac hrefs
+   https://voxloom.app/get-mac.html
+   favicon.ico
+   icon-192.png
+   favicon.svg
+   apple-touch-icon.png
+   manifest.webmanifest
+   base.css
+   #main
+   ./
+   download.html
+   privacy.html
+   changelog.html
+   https://github.com/voxloom-app/voxloom
+   https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg
+   https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.app.zip
+   https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/SHA256SUMS
+   https://github.com/voxloom-app/voxloom/releases/tag/v0.4.0
+   download.html#inst-h
+   download.html
+   privacy.html
+   changelog.html
+   https://github.com/voxloom-app/voxloom
+== links to get-mac in PR pages
+   changelog.html 0
+   download.html 1
+   get-mac.html 2
+   index.html 2
+   privacy.html 0
+== sitemap/robots files: []
