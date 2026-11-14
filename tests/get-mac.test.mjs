@@ -29,12 +29,13 @@ test('secondary release links stay direct to GitHub', () => {
 });
 
 test('get-mac.html targets the v0.4.0 DMG in its fallback link and no-JS refresh', () => {
-  assert.ok(page.includes(`<a id="dmg-link" href="${dmg}">`), 'missing fallback link');
+  assert.ok(page.includes(`<a class="btn ghost" id="dmg-link" href="${dmg}">`), 'missing fallback link');
   assert.ok(page.includes(`<noscript><meta http-equiv="refresh" content="1;url=${dmg}"></noscript>`), 'missing no-JS refresh');
   assert.equal(count(page, 'releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg'), 2);
   assert.doesNotMatch(page, /v0\.[0-35-9]\.\d|Voxloom_0\.[0-35-9]/);
   assert.match(page, /Your download is starting…/);
-  assert.match(page, /If your download didn&rsquo;t start, <a id="dmg-link"/);
+  assert.match(page, /<p class="ph">Download didn&rsquo;t start\?<\/p>\n  <div class="row"><a class="btn ghost" id="dmg-link"/);
+  assert.match(page, /<a href="download.html" aria-current="page">Download<\/a>/);
   assert.ok(page.includes('href="download.html#inst-h"'));
 });
 
