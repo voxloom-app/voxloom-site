@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Downloading Voxloom — Voxloom</title>
+  <meta name="description" content="Your Voxloom v0.4.0 for macOS download is starting. Includes a manual download link and the first install steps.">
+  <meta name="robots" content="noindex">
+  <link rel="canonical" href="https://voxloom.app/get-mac.html">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="icon" href="icon-192.png" type="image/png" sizes="192x192">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#07070b">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Voxloom">
+  <meta property="og:title" content="Downloading Voxloom — Voxloom">
+  <meta property="og:description" content="Your Voxloom v0.4.0 for macOS download is starting. Includes a manual download link and the first install steps.">
+  <meta property="og:url" content="https://voxloom.app/get-mac.html">
+  <meta property="og:image" content="https://voxloom.app/assets/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Voxloom: Your voice. Any app. Zero cloud.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Downloading Voxloom — Voxloom">
+  <meta name="twitter:description" content="Your Voxloom v0.4.0 for macOS download is starting. Includes a manual download link and the first install steps.">
+  <meta name="twitter:image" content="https://voxloom.app/assets/og.png">
+  <link rel="stylesheet" href="base.css">
+  <noscript><meta http-equiv="refresh" content="1;url=https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg"></noscript>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav class="wrap nav" aria-label="Main">
+  <a class="logo" href="./">Voxloom<em>.</em></a>
+  <span class="links">
+    <a href="download.html" aria-current="page">Download</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="changelog.html">Changelog</a>
+    <a href="https://github.com/voxloom-app/voxloom">GitHub</a>
+  </span>
+</nav>
+<main id="main" class="wrap doc">
+  <span class="badge">Free &amp; open source</span> <span class="badge beta">Beta</span>
+  <h1 class="h">Your download is starting…</h1>
+  <p class="lead">Voxloom v0.4.0 for macOS should start downloading from GitHub Releases in a moment, as <code>Voxloom_0.4.0_macos_universal.dmg</code>.</p>
+  <p class="ph">Download didn&rsquo;t start?</p>
+  <div class="row"><a class="btn ghost" id="dmg-link" href="https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg">Download v0.4.0 (.dmg)</a></div>
+  <p class="ph">Also on the release: <a href="https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.app.zip">zipped .app</a> · <a href="https://github.com/voxloom-app/voxloom/releases/download/v0.4.0/SHA256SUMS">SHA256SUMS</a> · <a href="https://github.com/voxloom-app/voxloom/releases/tag/v0.4.0">release page</a></p>
+  <section class="card" aria-labelledby="next-steps-h">
+    <small>SETUP</small><h2 class="h3" id="next-steps-h">Next steps</h2>
+    <ol>
+      <li>Open the <code>.dmg</code> and drag <b>Voxloom</b> to Applications.</li>
+      <li>Open Voxloom from Applications.</li>
+      <li>The Whisper model is not bundled. In Settings, choose a model and download it. Downloads only happen when you start them.</li>
+      <li>Grant the Microphone and Accessibility permissions.</li>
+      <li>Hold <b>Control + Shift + Space</b> (the default, changeable in Settings), speak, release.</li>
+    </ol>
+    <p class="ph">The install guide covers checksums, each macOS permission and the optional local cleanup model.</p>
+    <div class="row">
+      <a class="btn ghost" href="download.html#inst-h">Full install guide</a>
+    </div>
+  </section>
+</main>
+<footer class="wrap">
+  <span class="up">Voxloom</span>
+  <a href="download.html">Download</a>
+  <a href="privacy.html">Privacy</a>
+  <a href="changelog.html">Changelog</a>
+  <a href="https://github.com/voxloom-app/voxloom">GitHub</a>
+  <span class="ph">voxloom.app</span>
+</footer>
+<script>
+  // Start the DMG download 1s after load so the page view is recorded first,
+  // but never wait more than 3s in case the analytics script hangs.
+  var started = false;
+  function start() {
+    if (started) return;
+    started = true;
+    window.location.href = document.getElementById('dmg-link').href;
+  }
+  window.addEventListener('load', function () { setTimeout(start, 1000); });
+  setTimeout(start, 3000);
+</script>
+</body>
+</html>

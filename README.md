@@ -6,7 +6,7 @@ Visit the [website](https://voxloom.app/).
 
 ## Local development
 
-Use Node.js 24. The site uses plain HTML and CSS, with no third-party npm dependencies or application backend. Pages include no client-side JavaScript unless `VOXLOOM_ANALYTICS=1` is set at build time, in which case the build injects only the Vercel Web Analytics script and its `window.va` stub.
+Use Node.js 24. The site uses plain HTML and CSS, with no third-party npm dependencies or application backend. Pages include no client-side JavaScript unless `VOXLOOM_ANALYTICS=1` is set at build time, in which case the build injects only the Vercel Web Analytics script and its `window.va` stub. The one exception is `get-mac.html`, the page the DMG Download buttons open: a short inline script starts the DMG download one second after the page loads (a `<noscript>` refresh and a visible link cover browsers without JavaScript). Routing the download through this page lets Vercel Web Analytics count downloads as page views of `/get-mac.html`.
 
 ```sh
 npm ci --ignore-scripts
@@ -17,7 +17,7 @@ python3 -m http.server --directory public 8080
 
 Open http://localhost:8080 to preview the generated site.
 
-The build copies only the four HTML pages, two CSS files, favicons, touch icon and social image into `public/`. Documentation, development tools and local environment files are not included in the generated site.
+The build copies only the five HTML pages, two CSS files, favicons, touch icon and social image into `public/`. Documentation, development tools and local environment files are not included in the generated site.
 
 To enable website analytics, set `VOXLOOM_ANALYTICS=1` at build time after turning Web Analytics on for the Vercel project. That injects the official same-origin script on every page and the privacy-page analytics card. `/_vercel/insights/script.js` exists only after Web Analytics is enabled in the Vercel project and a fresh deploy. Until then, and on local static servers, the enabled build's script 404s and analytics is silently off. Leave the variable unset or empty for a build with no analytics script or card. Any other value fails the build. Do not commit a secret; this flag is not a token.
 
@@ -43,7 +43,7 @@ Before merging future launch updates:
 - Add the actual publication date to the changelog; do not invent it while preparing a release.
 - Run checks, build and desktop/mobile preview before merging.
 
-For future releases, update active download labels, asset URLs, install filenames, release notes and tests together. Preserve older changelog sections and their asset links. Keep system requirements, feature descriptions, setup instructions and privacy information aligned with the app.
+For future releases, update active download labels, asset URLs (including the DMG link and `<noscript>` refresh in `get-mac.html`), install filenames, release notes and tests together. Preserve older changelog sections and their asset links. Keep system requirements, feature descriptions, setup instructions and privacy information aligned with the app.
 
 ## Product text
 
