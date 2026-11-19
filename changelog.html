@@ -42,6 +42,26 @@
   <span class="badge beta">Beta</span>
   <h1 class="h">Changelog</h1>
   <p class="lead">Release notes for Voxloom. Voxloom is a work in progress.</p>
+  <section class="card" aria-labelledby="v050-h">
+    <small>2026-11-19 · BETA</small><h2 class="h3" id="v050-h">Voxloom v0.5.0</h2>
+    <p>A guided first run, dictation into many more apps, and one fewer permission.</p>
+    <p>This build is signed with a Developer ID and notarized by Apple.</p>
+    <h3 class="h4">What&rsquo;s changed</h3>
+    <ul>
+      <li>Guided setup for new users: Voxloom walks you through the Microphone and Accessibility permissions, a speech model download (Whisper Base English, about 148 MB, is recommended and starts only when you choose), your shortcut, and two practice tries (hold to talk, and double-tap for hands-free). People who have already set up Voxloom aren&rsquo;t sent back through it (<a href="https://github.com/voxloom-app/voxloom/pull/174">#174</a>, <a href="https://github.com/voxloom-app/voxloom/pull/179">#179</a>, <a href="https://github.com/voxloom-app/voxloom/pull/180">#180</a>, <a href="https://github.com/voxloom-app/voxloom/pull/181">#181</a>, <a href="https://github.com/voxloom-app/voxloom/pull/183">#183</a>).</li>
+      <li>Dictation works in many more apps. With Clipboard fallback on (the default), Voxloom pastes your text into the app you were in when you finished speaking, then puts your previous clipboard back. It skips password fields macOS marks as secure and never presses Send. If an app can&rsquo;t take the text safely, Voxloom copies it so you can paste it yourself (<a href="https://github.com/voxloom-app/voxloom/pull/195">#195</a>).</li>
+      <li>One fewer permission: Voxloom no longer needs Input Monitoring. Accessibility covers your shortcut and Esc to cancel (<a href="https://github.com/voxloom-app/voxloom/pull/172">#172</a>).</li>
+      <li>Settings → Privacy → Licenses → Third-Party Notices lists the open-source code behind text insertion, and Voxloom is now MIT licensed (<a href="https://github.com/voxloom-app/voxloom/pull/195">#195</a>, <a href="https://github.com/voxloom-app/voxloom/pull/173">#173</a>).</li>
+      <li>Dictating into Voxloom&rsquo;s own text fields, such as the dictionary search box, now works (<a href="https://github.com/voxloom-app/voxloom/pull/167">#167</a>).</li>
+      <li>Cleanup keeps your newest dictionary words when the list is long (<a href="https://github.com/voxloom-app/voxloom/pull/168">#168</a>), long dictionary lists no longer collapse their footer (<a href="https://github.com/voxloom-app/voxloom/pull/170">#170</a>), and Voxloom refuses unsafe special characters in dictated text before typing them (<a href="https://github.com/voxloom-app/voxloom/pull/169">#169</a>).</li>
+    </ul>
+    <p class="ph">Local cleanup remains optional and experimental. macOS only, no auto-update. <a href="download.html#cleanup-h">Cleanup setup</a>.</p>
+    <div class="row">
+      <a class="btn" href="https://github.com/voxloom-app/voxloom/releases/download/v0.5.0/Voxloom_0.5.0_macos_universal.dmg">Download v0.5.0 (.dmg)</a>
+      <a class="btn ghost" href="https://github.com/voxloom-app/voxloom/releases/tag/v0.5.0">Release page</a>
+    </div>
+    <p class="ph">Full changelog: <a href="https://github.com/voxloom-app/voxloom/compare/v0.4.0...v0.5.0">v0.4.0...v0.5.0</a> · <a href="https://github.com/voxloom-app/voxloom/releases/download/v0.5.0/SHA256SUMS">SHA256SUMS</a> · <a href="https://github.com/voxloom-app/voxloom/releases">All releases</a></p>
+  </section>
   <section class="card" aria-labelledby="v040-h">
     <small>2026-11-07 · BETA</small><h2 class="h3" id="v040-h">Voxloom v0.4.0</h2>
     <p>A smarter dictionary, more speech models, and a new listening look.</p>

@@ -35,32 +35,35 @@ for (const page of pages) {
 }
 
 const repo = 'https://github.com/voxloom-app/voxloom';
-const dmg = `${repo}/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg`;
-const sums = `${repo}/releases/download/v0.4.0/SHA256SUMS`;
+const dmg = `${repo}/releases/download/v0.5.0/Voxloom_0.5.0_macos_universal.dmg`;
+const sums = `${repo}/releases/download/v0.5.0/SHA256SUMS`;
+const dmg040 = `${repo}/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.dmg`;
+const sums040 = `${repo}/releases/download/v0.4.0/SHA256SUMS`;
 const read = (page) => readFileSync(resolve(root, page), 'utf8');
 
-test('download page is ready for v0.4.0 assets and install steps', () => {
+test('download page is ready for v0.5.0 assets and install steps', () => {
   const html = read('download.html');
-  for (const url of [sums, `${repo}/releases/download/v0.4.0/Voxloom_0.4.0_macos_universal.app.zip`, `${repo}/releases/tag/v0.4.0`, `${repo}/releases`, `${repo}/issues`]) {
+  for (const url of [sums, `${repo}/releases/download/v0.5.0/Voxloom_0.5.0_macos_universal.app.zip`, `${repo}/releases/tag/v0.5.0`, `${repo}/releases`, `${repo}/issues`]) {
     assert.ok(html.includes(`href="${url}"`), `missing ${url}`);
   }
   assert.match(html, /class="badge beta">Beta</);
   assert.match(html, /Work in progress/);
-  assert.ok(html.includes('<a class="btn" href="get-mac.html">Download v0.4.0 (.dmg)</a>'));
-  assert.match(html, /<code>Voxloom_0\.4\.0_macos_universal\.dmg<\/code>/);
+  assert.ok(html.includes('<a class="btn" href="get-mac.html">Download v0.5.0 (.dmg)</a>'));
+  assert.match(html, /<code>Voxloom_0\.5\.0_macos_universal\.dmg<\/code>/);
   assert.match(html, /macOS 13\.1 \(Ventura\) or later/);
   assert.match(html, /drag <b>Voxloom<\/b> to Applications/);
   assert.match(html, /Privacy &amp; Security → Microphone/);
   assert.match(html, /Privacy &amp; Security → Accessibility/);
-  assert.match(html, /Privacy &amp; Security → Input Monitoring/);
-  assert.match(html, /record the key again/);
+  assert.match(html, /guided setup/i);
+  assert.match(html, /Voxloom doesn&rsquo;t need Input Monitoring/);
+  assert.doesNotMatch(html, /Privacy &amp; Security → Input Monitoring|record the key again/);
 });
 
-test('homepage download buttons and beta label use v0.4.0', () => {
+test('homepage download buttons and beta label use v0.5.0', () => {
   const html = read('index.html');
   assert.equal(html.split('href="get-mac.html"').length - 1, 2);
-  assert.equal(html.split('Download v0.4.0 for macOS').length - 1, 2);
-  assert.match(html, /Beta v0\.4\.0/);
+  assert.equal(html.split('Download v0.5.0 for macOS').length - 1, 2);
+  assert.match(html, /Beta v0\.5\.0/);
   assert.match(html, /class="badge beta">Beta</);
   assert.match(html, /expect rough edges/);
   assert.ok(html.includes(`href="${repo}/issues"`));
@@ -70,7 +73,7 @@ test('homepage presents the launch features without an upcoming-release teaser',
   const html = read('index.html');
   assert.doesNotMatch(html, /next-h|In development|Next up/);
   assert.match(html, /dictionary[\s\S]*case[\s\S]*spacing/i);
-  assert.ok(html.includes('href="changelog.html#v040-h"'));
+  assert.ok(html.includes('href="changelog.html#v050-h"'));
   assert.match(html, /Local cleanup[\s\S]*[Ee]xperimental/);
   assert.match(html, /optional[\s\S]*punctuation[\s\S]*filler words/i);
   assert.match(html, /depending on your retention setting/);
@@ -103,6 +106,35 @@ test('install guide describes the v0.3 in-app cleanup download, not manual Impor
   assert.match(cleanup, /not required for dictation/);
 });
 
+test('v0.5 release notes cover merged changes and sit above v0.4', () => {
+  const html = read('changelog.html');
+  const launch = html.match(/<section[^>]+aria-labelledby="v050-h"[\s\S]*?<\/section>/)?.[0];
+  assert.ok(launch, 'missing v0.5 release notes');
+  assert.match(launch, /Voxloom v0\.5\.0/);
+  for (const number of [167, 168, 169, 170, 172, 173, 174, 179, 180, 181, 183, 195]) {
+    assert.ok(launch.includes(`href="${repo}/pull/${number}"`), `missing #${number}`);
+  }
+  assert.doesNotMatch(launch, /\/pull\/19[34]"/, 'deferred PRs must not be advertised');
+  assert.match(launch, /2026-11-19 · BETA/);
+  assert.match(launch, /signed with a Developer ID and notarized by Apple/);
+  assert.match(launch, /Guided setup/);
+  assert.match(launch, /no longer needs Input Monitoring/);
+  for (const url of [dmg, sums, `${repo}/releases/tag/v0.5.0`, `${repo}/compare/v0.4.0...v0.5.0`]) {
+    assert.ok(launch.includes(`href="${url}"`), `missing ${url}`);
+  }
+});
+
+test('privacy page describes the shared paste route', () => {
+  const html = read('privacy.html');
+  const card = html.match(/<section class="card"><small>CLIPBOARD<\/small>[\s\S]*?<\/section>/)?.[0];
+  assert.ok(card, 'missing clipboard card');
+  assert.match(card, /on by default/);
+  assert.match(card, /about 1\.5 seconds/);
+  assert.match(card, /restores your previous clipboard/);
+  assert.match(card, /aren&rsquo;t marked secure/);
+  assert.match(card, /advisory/);
+});
+
 test('v0.4 release notes cover merged changes and sit above v0.3', () => {
   const html = read('changelog.html');
   const launch = html.match(/<section[^>]+aria-labelledby="v040-h"[\s\S]*?<\/section>/)?.[0];
@@ -112,12 +144,13 @@ test('v0.4 release notes cover merged changes and sit above v0.3', () => {
     assert.ok(launch.includes(`href="${repo}/pull/${number}"`), `missing #${number}`);
   }
   assert.match(launch, /2026-11-07 · BETA/);
-  for (const url of [dmg, sums, `${repo}/releases/tag/v0.4.0`, `${repo}/compare/v0.3.0...v0.4.0`]) {
+  for (const url of [dmg040, sums040, `${repo}/releases/tag/v0.4.0`, `${repo}/compare/v0.3.0...v0.4.0`]) {
     assert.ok(launch.includes(`href="${url}"`), `missing ${url}`);
   }
+  assert.ok(html.indexOf('id="v050-h"') < html.indexOf('id="v040-h"'));
   assert.ok(html.indexOf('id="v040-h"') < html.indexOf('id="v030-h"'));
   for (const page of ['index.html', 'download.html']) {
-    assert.doesNotMatch(read(page), /v0\.3\.0|Voxloom_0\.3/, page);
+    assert.doesNotMatch(read(page), /v0\.4\.0|Voxloom_0\.4/, page);
   }
 });
 

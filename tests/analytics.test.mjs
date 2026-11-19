@@ -84,7 +84,7 @@ test('enabled build injects one script plus stub per page and the privacy card',
     assert.match(privacy, /pages visited, referrer, approximate location, and browser, OS, and device type/);
     assert.doesNotMatch(privacy, /only stores anonymized, aggregated data/);
     assert.match(privacy, /The Voxloom app itself does not include this analytics script and sends nothing to this service/);
-    assert.match(privacy, /Last updated: November 10, 2026/);
+    assert.match(privacy, /Last updated: November 19, 2026/);
     assert.doesNotMatch(privacy, /November 4, 2026/);
   } finally {
     rmSync(out, { recursive: true, force: true });
@@ -113,7 +113,7 @@ test('build with the flag throws if the last-updated date is missing and leaves 
     writeFileSync(resolve(src, 'privacy.html'), read(src, 'privacy.html').replace(dateBefore, 'Last updated: January 1, 2020.'));
   });
   try {
-    await assert.rejects(() => buildSite({ root: dir, output: out, flag: '1' }), /November 4, 2026/);
+    await assert.rejects(() => buildSite({ root: dir, output: out, flag: '1' }), /November 19, 2026/);
     assert.deepEqual(listing(out), ['SENTINEL']);
   } finally {
     rmSync(dir, { recursive: true, force: true });
@@ -130,7 +130,7 @@ test('marker replacement is checked, consumes leading indentation, and works wit
     const privacy = read(out, 'privacy.html');
     assert.ok(privacy.includes(cardText));
     assert.doesNotMatch(privacy, /voxloom-analytics-card/);
-    assert.match(privacy, /Last updated: November 10, 2026/);
+    assert.match(privacy, /Last updated: November 19, 2026/);
   } finally {
     rmSync(dir, { recursive: true, force: true });
     rmSync(out, { recursive: true, force: true });
