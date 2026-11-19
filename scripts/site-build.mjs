@@ -9,8 +9,8 @@ export const files = [
   'manifest.webmanifest', 'assets/og.png',
 ];
 export const cardMark = '<!--voxloom-analytics-card-->';
-export const dateBefore = 'Last updated: November 4, 2026.';
-export const dateAfter = 'Last updated: November 10, 2026.';
+export const dateBefore = 'Last updated: November 19, 2026.';
+export const dateAfter = 'Last updated: November 19, 2026.';
 export const cardMarkPattern = /^[ \t]*<!--voxloom-analytics-card-->\n?/m;
 
 export function expectedDisabledBytes(root, file) {
